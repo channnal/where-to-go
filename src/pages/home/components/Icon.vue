@@ -79,7 +79,8 @@
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl'
+@import '~styles/varibles.styl';
+@import '~styles/mixins.styl';
     .icons >>> .swiper-container
         height 0
         padding-bottom 50%
@@ -101,15 +102,15 @@
             .icon-imgcontent
                 display block
                 margin 0 auto
-                height 100%
+                height 70%
         .icon-desc
             position absolute 
             left 0
             right 0
             bottom 0
-            height .44rem
-            line-height .44rem
+            height 1.5rem
+            line-height 1.5rem
             color $darkTextColor
             text-align center
-
+            ellipsis()
 </style>
