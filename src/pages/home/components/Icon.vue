@@ -16,56 +16,13 @@
 <script>
     export default {
         name:"HomeIcons",
-        data() {
-            return {
-                iconList:[{
-                    id:'001',
-                    imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                    desc:'景点门票'
-
-                },{
-                    id:'002',
-                    imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
-                    desc:'自然风光'
-                },{
-                    id:'003',
-                    imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-                    desc:'植物园'
-                },{
-                    id:'004',
-                    imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png',
-                    desc:'漂流'
-                },{
-                    id:'005',
-                    imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
-                    desc:'自然风光'
-                },{
-                    id:'006',
-                    imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-                    desc:'植物园'
-                },{
-                    id:'007',
-                    imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png',
-                    desc:'漂流'
-                },{
-                    id:'008',
-                    imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
-                    desc:'自然风光'
-                },{
-                    id:'009',
-                    imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-                    desc:'植物园'
-                },{
-                    id:'010',
-                    imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png',
-                    desc:'漂流'
-                }]
-            }
+        props: {
+            list: Array
         },
         computed:{
             pages () {
                 const pages = []
-                this.iconList.forEach((icon,index)=>{
+                this.list.forEach((icon,index)=>{
                     const page = Math.floor(index/8)
                     if(!pages[page]){
                         pages[page]=[]
@@ -102,7 +59,7 @@
             .icon-imgcontent
                 display block
                 margin 0 auto
-                height 70%
+                height 65%
         .icon-desc
             position absolute 
             left 0
