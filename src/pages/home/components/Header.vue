@@ -7,10 +7,13 @@
             <span class="iconfont">&#xe63c;</span>
             输入城市/景点/游玩主题
         </div>
-        <div class="header-right">
-            {{this.city}}
-            <span class="iconfont arrow-icon">&#xe65c;</span>
-        </div>
+        <router-link to="/city">
+            <div class="header-right">
+                {{this.city}}
+                <span class="iconfont arrow-icon">&#xe65c;</span>
+            </div>        
+        </router-link>
+
     </div>
 </template>
 
@@ -31,7 +34,7 @@ import '../../../assets/styles/iconfont.css'
         color:#FFF
         background:$bgColor
         display:flex
-        line-height: .86rem
+        line-height: $headerHight
         .header-left
             width: .64rem
             float:left
@@ -52,6 +55,7 @@ import '../../../assets/styles/iconfont.css'
             width: 1.24rem
             float:right
             text-align:center
+            color:#fff
             .arrow-icon
                 font-size:.24rem
                 
