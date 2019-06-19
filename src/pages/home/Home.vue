@@ -30,8 +30,8 @@
                 lastCity:'',
                 iconList:[],
                 swiperList:[],
-                weekendList:[],
-                recommendList:[]
+                recommendList:[],
+                weekendList:[]
             }
         },
         computed: {
