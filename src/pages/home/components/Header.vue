@@ -9,7 +9,8 @@
         </div>
         <router-link to="/city">
             <div class="header-right">
-                {{this.doubleCity}}
+                {{this.city}}
+                <!-- {{this.doubleCity}} -->
                 <span class="iconfont arrow-icon">&#xe65c;</span>
             </div>        
         </router-link>
@@ -18,12 +19,12 @@
 </template>
 
 <script>
-import { mapState,mapGetters } from 'vuex'
+import { mapState } from 'vuex'
     export default {
         name:"HomeHeader",
         computed: {
             ...mapState(['city']), //把vuex中的getter映射到组件的computed的计算属性里
-            ...mapGetters(['doubleCity'])
+            // ...mapGetters(['doubleCity'])
         }
     }
 </script>
