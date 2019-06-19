@@ -33,7 +33,6 @@ export default {
                 res=res.data
                 if(res.ret && res.data){
                     const data=res.data
-                    this.city=data.city
                     this.iconList=data.iconList
                     this.swiperList = data.swiperList
                     this.weekendList = data.weekendList
@@ -45,7 +44,6 @@ export default {
         },
         data () {
             return {
-                city: '',
                 iconList:[],
                 swiperList:[],
                 weekendList:[]
