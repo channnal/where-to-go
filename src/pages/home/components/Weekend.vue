@@ -1,11 +1,14 @@
 <template>
     <div>
-        <ul v-for="weekend of list" :key="weekend.id">
-            <li>
+            <div class="title">周末去哪儿</div>
+
+        <ul>
+            <router-link tag="li" :to="/detail/+weekend.id" class="item border-bottom" v-for="weekend of list" :key="weekend.id" >
                 <img :src="weekend.imgUrl" alt="" class="week-img">
                 <p>{{weekend.title}}</p>
                 <p>{{weekend.desc}}</p>
-            </li>
+            </router-link>
+
         </ul>
     </div>
 </template>
